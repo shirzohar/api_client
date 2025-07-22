@@ -43,7 +43,7 @@ API Client is a lightweight desktop tool inspired by Postman, designed for devel
 
 **Installation:**
 ```bash
-git clone <repo-url>
+git clone (https://github.com/shirzohar/api_client)
 cd api_client
 npm install --legacy-peer-deps
 ```
