@@ -4,6 +4,11 @@ A modern, cross-platform desktop application for sending HTTP requests, managing
 
 ---
 
+## Application Description
+API Client is a lightweight desktop tool inspired by Postman, designed for developers and testers to easily send HTTP requests, manage request history, and visualize API usage. The app features a modern UI, dynamic headers, JSON body support, and a dashboard with charts.
+
+---
+
 ## Features
 - Clean, intuitive, and responsive UI
 - Send GET, POST, PUT, DELETE requests
@@ -66,7 +71,11 @@ A modern, cross-platform desktop application for sending HTTP requests, managing
    npm start
    ```
 3. **To package as an executable:**
-   - (Optional) Use [electron-builder](https://www.electron.build/) or [electron-forge](https://www.electronforge.io/) for Windows/macOS/Linux installers.
+   ```bash
+   npm run dist
+   ```
+   - The Windows executable will be in `dist/win-unpacked/API Client.exe`.
+   - For a full installer, see electron-builder docs.
 
 ---
 
@@ -91,10 +100,10 @@ A modern, cross-platform desktop application for sending HTTP requests, managing
 
 ---
 
-## Credits & AI Usage
-- Developed by Shir3 with AI pair programming (ChatGPT, Copilot, etc.)
-- All code reviewed and understood by the developer
-- Assignment for desktop app development evaluation
-
+## API Documentation
+See [`src/renderer/api-docs.md`](src/renderer/api-docs.md) for documentation of the main modules and types.
 
 ---
+
+
+
