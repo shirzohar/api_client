@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/PopularApis.css';
 
 export interface ApiTemplate {
   name: string;
@@ -40,18 +41,18 @@ const popularApis: ApiTemplate[] = [
 
 export function PopularApis({ onSelect }: { onSelect: (api: ApiTemplate) => void }) {
   return (
-    <div style={{ width: 480, maxWidth: '100%', margin: '0 auto', marginTop: 32 }}>
-      <h2 style={{ color: '#00e0ff', textAlign: 'center', marginBottom: 24 }}>Popular APIs</h2>
+    <div className="popular-root">
+      <h2 className="popular-title">Popular APIs</h2>
       {popularApis.map(api => (
-        <div key={api.name} style={{ background: '#232526', borderRadius: 12, boxShadow: '0 2px 8px #0002', padding: 18, marginBottom: 18, cursor: 'pointer', transition: 'box-shadow 0.2s', border: '2px solid transparent' }}
+        <div
+          key={api.name}
+          className="popular-card"
           onClick={() => onSelect(api)}
-          onMouseOver={e => (e.currentTarget.style.boxShadow = '0 4px 16px #00e0ff44')}
-          onMouseOut={e => (e.currentTarget.style.boxShadow = '0 2px 8px #0002')}
         >
-          <div style={{ fontWeight: 700, fontSize: 18, color: '#00e0ff' }}>{api.name}</div>
-          <div style={{ fontSize: 15, color: '#ccc', margin: '6px 0 0 0' }}>{api.description}</div>
-          <div style={{ fontSize: 14, color: '#aaa', marginTop: 6 }}><b>Method:</b> {api.method} <b>URL:</b> {api.url}</div>
-          {api.body && <pre style={{ fontSize: 13, color: '#ffc107', margin: 0, marginTop: 8, background: '#181a1b', borderRadius: 6, padding: 8 }}>Body: {api.body}</pre>}
+          <div className="popular-name">{api.name}</div>
+          <div className="popular-desc">{api.description}</div>
+          <div className="popular-meta"><b>Method:</b> {api.method} <b>URL:</b> {api.url}</div>
+          {api.body && <pre className="popular-body">Body: {api.body}</pre>}
         </div>
       ))}
     </div>

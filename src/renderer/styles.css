@@ -198,4 +198,19 @@ input:focus, select:focus, textarea:focus {
   padding: 6px 16px;
   font-weight: 700;
   cursor: pointer;
+}
+.request-spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid #00e0ff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: request-spin 1s linear infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+@keyframes request-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 } 
