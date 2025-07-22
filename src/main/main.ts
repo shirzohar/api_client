@@ -17,7 +17,7 @@ function createWindow() {
   win.loadURL(
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
-      : `file://${path.join(__dirname, '../renderer/index.html')}`
+      : `file://${path.join(__dirname, '../index.html')}`
   );
 }
 
